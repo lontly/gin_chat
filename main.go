@@ -5,6 +5,8 @@ import (
 	"Gin_Chat/utils"
 )
 
+
+//main包启动app
 func main() {
 	utils.InitConfig()
 	utils.InitMysql()

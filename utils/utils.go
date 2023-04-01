@@ -18,16 +18,12 @@ func InitConfig() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	fmt.Println("config app:", viper.Get("app"))
+	fmt.Println("app inited")
 	fmt.Println("config mysql:", viper.Get("mysql"))
 }
 
 func InitMysql() {
+	//初始化mysql  gorm连接mysql,viper.GetString()用于获取配置文件中的mysql配置
 	DB, _ = gorm.Open(mysql.Open(viper.GetString("mysql.dns")), &gorm.Config{})
-	// if err != nil {
-	// 	panic("failed to connect database")
-	// }
-	// user := models.UserBasic{}
-	// DB.Find(&user)
-	// fmt.Println(user)
+	fmt.Println("mysql inited")
 }
