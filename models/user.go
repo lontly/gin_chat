@@ -3,8 +3,9 @@ package models
 import (
 	"Gin_Chat/utils"
 	"fmt"
-	"gorm.io/gorm"
 	"time"
+
+	"gorm.io/gorm"
 )
 
 // UserBasic继承gorm.Model
@@ -35,4 +36,8 @@ func GetUserList() []UserBasic {
 		fmt.Println(v)
 	}
 	return data
+}
+
+func CreateUser(user UserBasic) *gorm.DB {
+	return utils.DB.Create(&user)
 }

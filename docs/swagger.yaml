@@ -1,0 +1,26 @@
+info:
+  contact: {}
+paths:
+  /getuserlist:
+    get:
+      description: do ping
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: ping example
+      tags:
+      - 获取用户列表
+  /index:
+    get:
+      description: do ping
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: ping example
+      tags:
+      - 首页
+swagger: "2.0"
