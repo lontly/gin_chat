@@ -1,17 +1,6 @@
 info:
   contact: {}
 paths:
-  /getuserlist:
-    get:
-      description: do ping
-      responses:
-        "200":
-          description: OK
-          schema:
-            type: string
-      summary: ping example
-      tags:
-      - 获取用户列表
   /index:
     get:
       description: do ping
@@ -23,4 +12,81 @@ paths:
       summary: ping example
       tags:
       - 首页
+  /user/deleteuser:
+    get:
+      description: do ping
+      parameters:
+      - description: id
+        in: query
+        name: id
+        type: string
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 删除用户
+      tags:
+      - 用户模块
+  /user/getuserlist:
+    get:
+      description: do ping
+      responses: {}
+      summary: 所有用户
+  /user/register:
+    get:
+      description: do ping
+      parameters:
+      - description: 用户名
+        in: query
+        name: name
+        type: string
+      - description: 密码
+        in: query
+        name: password
+        type: string
+      - description: 确认密码
+        in: query
+        name: repassword
+        type: string
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 新增用户
+      tags:
+      - 用户模块
+  /user/updateuser:
+    post:
+      description: do ping
+      parameters:
+      - description: id
+        in: formData
+        name: id
+        type: string
+      - description: name
+        in: formData
+        name: name
+        type: string
+      - description: password
+        in: formData
+        name: password
+        type: string
+      - description: email
+        in: formData
+        name: email
+        type: string
+      - description: phone
+        in: formData
+        name: phone
+        type: string
+      responses:
+        "200":
+          description: code","message"}
+          schema:
+            type: string
+      summary: 修改用户
+      tags:
+      - 用户模块
 swagger: "2.0"

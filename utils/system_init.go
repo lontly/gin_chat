@@ -42,3 +42,5 @@ func InitMysql() {
 	DB, _ = gorm.Open(mysql.Open(viper.GetString("mysql.dns")), &gorm.Config{Logger: newLogger})
 	fmt.Println("mysql inited")
 }
+
+
